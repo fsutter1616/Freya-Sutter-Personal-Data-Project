@@ -5,6 +5,8 @@ For this project, most of my visualizations are maps because the data is tied to
 
 The first map I made shows the total number of fast-food restaurants in each NYC ZIP code. Midtown Manhattan has extremely high counts as some ZIP codes having more than 400 fast-food restaraunts. Several neighborhoods in Brooklyn, the Bronx, and Staten Island also have high amounts, while other areas have much fewer fast-food restaurants.
 
+![Fast Food Map](images/[farmers_map.png](https://github.com/fsutter1616/Freya-Sutter-Personal-Data-Project/blob/main/Fastfoodmap.png))
+
 I also created a map of farmers markets to compare access to fresh food. This map looks completely different from the fast-food one. Many ZIP codes have zero farmers markets, and only a few have more than three. It highlights how unevenly farmers markets are distributed compared to the density of fast-food restaurants.
 
 To make the differences easier to connect to specific zip codes, I also created a bar chart of the top 10 ZIP codes with the highest fast-food counts. ZIP codes such as 10001 and 10036 have more than 400 restaurants each, which is a huge number considering how small a ZIP code area can be. This chart helped me identify the most saturated food environments.

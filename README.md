@@ -1,6 +1,10 @@
 # Freya-Sutter-Personal-Data-Project
 
-## Data Souorces
+## Motivation
+
+The question I set out to answer in this project was how evenly different types of food sources are distributed across New York City, and whether certain neighborhoods face significantly worse food access than others. New York is known for having both dense commercial districts and areas with limited food access, which made me curious about how fast-food restaurants, farmers markets, and full-service grocery stores vary across ZIP codes. My main guiding question became: How imbalanced is food access across NYC ZIP codes, and which neighborhoods experience the highest concentration of fast-food restaurants relative to grocery stores and fresh food options? I chose this topic because discussions about food deserts and grocery access appear frequently in public policy conversations, especially recently with the election of NYC mayor Zohran Mamdani, whose campaign was centered around the cost of living and groceries. 
+
+## Data Sources
 
 To explore this question, I used three publicly available datasets from NYC Open Data and the New York State Department of Agriculture and Markets.
 

@@ -4,7 +4,7 @@
 
 To explore this question, I used three publicly available datasets from NYC Open Data and the New York State Department of Agriculture and Markets.
 
-### 1. NYC Restaurant Inspection Results — Cleaned to Fast-Food Only
+### 1. NYC Restaurant Inspection Results
 
 This dataset includes over 135,000 rows of restaurant inspection records from the NYC Department of Health and Mental Hygiene (DOHMH). The full dataset contains all restaurant types, but for this project I cleaned it so that it only includes fast-food restaurants. I identified fast-food establishments by filtering based on the DBA Name  fields and isolating chain brands and known quick-service restaurants rather than full-service restaurants.
 
@@ -26,7 +26,15 @@ After filtering, I used count(zipcode) to calculate the number of fast-food rest
 
 Next, I processed the farmers market dataset, which includes location and descriptive information for markets across the city. I standardized the ZIP code column, then counted the number of farmers markets per ZIP code. Unlike the fast-food data, many ZIP codes had no markets, so I used a full_join() when combining datasets later to ensure that ZIP codes with zero markets remained included.
 
-For the full-service grocery store dataset, I again standardized ZIP codes and filtered for entries located in New York City. Because this dataset includes many types of food-related stores, I filtered it to identify supermarkets by selecting rows where Establishment Type was “A” and Operation Type was “Store.” I created a combined name field to help filter out delis, bodegas, convenience stores, pharmacies, dollar stores, and similar businesses by using keyword matching with str_detect(). After these exclusions, I counted the number of full-service grocery stores in each ZIP code. To identify full-service grocery stores, I filtered the Retail Food Stores dataset using keyword matching. I kept rows where the store’s combined name included supermarket indicators such as “whole foods,” “trader joe,” “aldi,” “costco,” “walmart,” “target,” “stop & shop,” “shoprite,” “kroger,” “bj’s,” “key food,” “food bazaar,” “ctown,” “c town,” “associated,” “food universe,” “pioneer,” “western beef,” “fine fare,” “met food,” “metfresh,” “food dynasty,” “sea town,” “supermarket,” “market,” “grocery,” or “foods.” I then removed any stores whose names contained terms associated with small shops or non-supermarkets, including “deli,” “bodega,” “cigar,” “smoke,” “pharmacy,” “dollar,” “99,” “convenience,” “gas,” “mart,” “mini,” “station,” “express,” “quick,” “corner,” or “halal.” This left me with a dataset that reflects actual full-service grocery stores rather than delis or convenience stores.
+For the full-service grocery store dataset, I again standardized ZIP codes and filtered for entries located in New York City. Because this dataset includes many types of food-related stores, I filtered it to identify supermarkets by selecting rows where Establishment Type was “A” and Operation Type was “Store.” I created a combined name field to help filter out delis, bodegas, convenience stores, pharmacies, dollar stores, and similar businesses by using keyword matching with str_detect(). After these exclusions, I counted the number of full-service grocery stores in each ZIP code. To identify full-service grocery stores, I filtered the Retail Food Stores dataset using keyword matching. I kept rows where the store’s combined name included supermarket indicators such as:
+
+“whole foods,” “trader joe,” “aldi,” “costco,” “walmart,” “target,” “stop & shop,” “shoprite,” “kroger,” “bj’s,” “key food,” “food bazaar,” “ctown,” “c town,” “associated,” “food universe,” “pioneer,” “western beef,” “fine fare,” “met food,” “metfresh,” “food dynasty,” “sea town,” “supermarket,” “market,” “grocery,” or “foods.” 
+
+I then removed any stores whose names contained terms associated with small shops or non-supermarkets, including:
+
+“deli,” “bodega,” “cigar,” “smoke,” “pharmacy,” “dollar,” “99,” “convenience,” “gas,” “mart,” “mini,” “station,” “express,” “quick,” “corner,” or “halal.” 
+
+This left me with a dataset that reflects actual full-service grocery stores rather than delis or convenience stores.
 
 I then calculated the Fast Food : Grocery Ratio by dividing the number of fast-food restaurants by the number of grocery stores in each ZIP code, using pmax(num_groceries, 1) to avoid dividing by zero while still preserving the interpretation of extreme imbalance.
 

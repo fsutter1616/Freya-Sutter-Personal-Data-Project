@@ -4,7 +4,7 @@
 
 For this project, most of my visualizations are maps because the data is tied to ZIP codes, and being able to look at a map makes the differences much clearer. 
 
-The first map I made shows the total number of fast-food restaurants in each NYC ZIP code. Midtown Manhattan has extremely high counts as some ZIP codes having more than 400 fast-food restaraunts. Several neighborhoods in Brooklyn, the Bronx, and Staten Island also have high amounts, while other areas have much fewer fast-food restaurants.
+The first map I made shows the total number of fast-food restaurants in each NYC ZIP code. Midtown Manhattan has extremely high counts with some ZIP codes containing more than 400 fast-food restaraunts. Several neighborhoods in Brooklyn, the Bronx, and Staten Island also have high amounts, while other areas have much fewer fast-food restaurants.
 
 <img src="Fastfoodmap.png" width="600">
 
@@ -16,7 +16,7 @@ To make the differences easier to connect to specific zip codes, I also created 
 
 <img src="Fastfoodbarchart.png" width="600">
 
-After cleaning the full-service grocery store data, I also created a Fast Food to Grocery Ratio map. This is my main visualization for this project. Instead of focusing on raw numbers, this map shows how many fast-food restaurants exist for every grocery store in each ZIP code. Some neighborhoods have ratios above 200, and a few are above 300 or even 400. These neighborhoods are the lightest areas on the map and represent the most extreme food imbalance.
+After cleaning the retail food store data, I also created a Fast Food to Grocery Ratio map. This is my main visualization for this project. Instead of focusing on raw numbers, this map shows how many fast-food restaurants exist for every grocery store in each ZIP code. Some neighborhoods have ratios above 200, and a few are above 300 or even 400. These neighborhoods are the ones shown in red and represent the most extreme food imbalance.
 
 <img src="Ratiomap.png" width="600">
 
@@ -28,7 +28,7 @@ Overall, these visuals show both the overall distribution of food sources in NYC
 
 ## Analysis
 
-To go beyond the visual analysis, I also used Tukey’s Five-Number Summary and the IQR rule to analyze the fast-food to grocery ratio. This ratio tells me how many fast-food restaurants exist for each grocery store in a ZIP code. The summary was:
+To go beyond the visual analysis, I also used Tukey’s Five-Number Summary and the IQR rule to analyze the fast-food to grocery ratio. This ratio tells me how many fast-food restaurants exist for each grocery store in a ZIP code. I chose to use Tukey’s Five-Number Summary and the IQR rule because these techniques make it easier to understand the shape of the distribution and identify ZIP codes that differ substantially from the rest of the city. The summary was:
 
 - Minimum: 1  
 - First Quartile: 28  

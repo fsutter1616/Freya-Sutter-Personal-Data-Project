@@ -26,7 +26,7 @@ I began with the restaurant inspection dataset, which includes more than 135,000
 
 "McDonald", "Burger King", "Wendy", "Shake Shack", "Five Guys", "White Castle", "Checkers", "Smashburger", "Kfc", "Popeyes", "Crown Fried", "Kennedy Fried" "Chick", "Wingstop", "Taco Bell", "Chipotle", "Qdoba", "Dos Toros", "Domino", "Pizza Hut","99 Cent", "99¢", "Two Bros", "2 Bros", "Dunkin", "Krispy Kreme", "Baskin Robbins", "Carve "Ben & Jerry", "Cold Stone", "Pinkberry", "Haagen Dazs", "Dairy Queen", "Crumbl", "Starbucks"
 
-After filtering, I used count(zipcode) to calculate the number of fast-food restaurants in each ZIP code and saved this as my fast-food dataset.
+After filtering, I used count(zipcode) to calculate the number of fast-food restaurants in each ZIP code.
 
 Next, I processed the farmers market dataset, which includes location and descriptive information for markets across the city. I standardized the ZIP code column, then counted the number of farmers markets per ZIP code. Unlike the fast-food data, many ZIP codes had no markets, so I used a full_join() when combining datasets later to ensure that ZIP codes with zero markets remained included.
 

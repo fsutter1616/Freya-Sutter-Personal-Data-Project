@@ -18,7 +18,7 @@ This dataset lists farmers markets and food box locations across the five boroug
 
 ### 3. NYS Retail Food Stores (Agriculture & Markets) - NY Open Data
 
-This dataset contains all licensed retail food stores in New York State, updated anually. I filtered it to include only full-service grocery stores in NYC ZIP codes by selecting entries with Establishment Type = “A” and Operation Type = “Store,” and then removing delis, bodegas, convenience stores, dollar stores, and other businesses that are not true supermarkets. 
+This dataset contains all licensed retail food stores in New York State, updated anually. I filtered it to include only full-service grocery stores in NYC ZIP codes by selecting entries with Establishment Type = “A” and Operation Type = “Store”, and then removing delis, bodegas, convenience stores, dollar stores, and other businesses that are not true supermarkets. 
 
 ## Data Process
 

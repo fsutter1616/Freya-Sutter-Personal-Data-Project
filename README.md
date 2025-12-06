@@ -8,17 +8,17 @@ The question I set out to answer in this project was how evenly different types 
 
 To explore this question, I used three publicly available datasets from NYC Open Data and the New York State Department of Agriculture and Markets.
 
-### 1. NYC Restaurant Inspection Results
+### 1. NYC Restaurant Inspection Results - NYC Open Data
 
-This dataset includes over 135,000 rows of restaurant inspection records from the NYC Department of Health and Mental Hygiene (DOHMH). The full dataset contains all restaurant types, but for this project I cleaned it so that it only includes fast-food restaurants. I identified fast-food establishments by filtering based on the DBA Name  fields and isolating chain brands and known quick-service restaurants rather than full-service restaurants.
+This dataset includes over 135,000 rows of restaurant inspection records from the NYC Department of Health and Mental Hygiene (DOHMH) and is updated frequently. The full dataset contains all restaurant types, but for this project I cleaned it so that it only includes fast-food restaurants. I identified fast-food establishments by filtering based on the DBA Name  fields and isolating chain brands and known quick-service restaurants rather than full-service restaurants.
 
-### 2. NYC Farmers Markets
+### 2. NYC Farmers Markets - NYC Open Data
 
-This dataset lists farmers markets and food box locations across the five boroughs. Each row represents a single market, with ZIP codes, location details, and operational information. 
+This dataset lists farmers markets and food box locations across the five boroughs and is updated anually. Each row represents a single market, with ZIP codes, location details, and operational information. 
 
-### 3. NYS Retail Food Stores (Agriculture & Markets)
+### 3. NYS Retail Food Stores (Agriculture & Markets) - NY Open Data
 
-This dataset contains all licensed retail food stores in New York State. I filtered it to include only full-service grocery stores in NYC ZIP codes by selecting entries with Establishment Type = “A” and Operation Type = “Store,” and then removing delis, bodegas, convenience stores, dollar stores, and other businesses that are not true supermarkets. 
+This dataset contains all licensed retail food stores in New York State, updated anually. I filtered it to include only full-service grocery stores in NYC ZIP codes by selecting entries with Establishment Type = “A” and Operation Type = “Store,” and then removing delis, bodegas, convenience stores, dollar stores, and other businesses that are not true supermarkets. 
 
 ## Data Process
 

@@ -24,13 +24,13 @@ This dataset contains all licensed retail food stores in New York State, updated
 
 I began with the restaurant inspection dataset, which includes more than 135,000 rows of restaurant inspection records. I first standardized the ZIP code column by padding values to five digits using str_pad(). Because this dataset contains all types of restaurants, I had to isolate fast-food locations. Using the “DBA Name” column, I filtered for chain brands and quick-service restaurants, excluding full-service dining. These are the names I included:
 
-"McDonald", "Burger King", "Wendy", "Shake Shack", "Five Guys", "White Castle", "Checkers", "Smashburger", "Kfc", "Popeyes", "Crown Fried", "Kennedy Fried" "Chick", "Wingstop", "Taco Bell", "Chipotle", "Qdoba", "Dos Toros", "Domino", "Pizza Hut","99 Cent", "99¢", "Two Bros", "2 Bros", "Dunkin", "Krispy Kreme", "Baskin Robbins", "Carve "Ben & Jerry", "Cold Stone", "Pinkberry", "Haagen Dazs", "Dairy Queen", "Crumbl", "Starbucks"
+"McDonald", "Burger King", "Wendy", "Shake Shack", "Five Guys", "White Castle", "Checkers", "Smashburger", "Kfc", "Popeyes", "Crown Fried", "Kennedy Fried" "Chick", "Wingstop", "Taco Bell", "Chipotle", "Qdoba", "Dos Toros", "Domino", "Pizza Hut","99 Cent", "99¢", "Two Bros", "2 Bros", "Dunkin", "Krispy Kreme", "Baskin Robbins", "Carve "Ben & Jerry", "Cold Stone", "Pinkberry", "Haagen Dazs", "Dairy Queen", "Crumbl", "Starbucks."
 
 After filtering, I used count(zipcode) to calculate the number of fast-food restaurants in each ZIP code.
 
 Next, I processed the farmers market dataset, which includes location and descriptive information for markets across the city. I standardized the ZIP code column, then counted the number of farmers markets per ZIP code. Unlike the fast-food data, many ZIP codes had no markets, so I used a full_join() when combining datasets later to ensure that ZIP codes with zero markets remained included.
 
-For the full-service grocery store dataset, I again standardized ZIP codes and filtered for entries located in New York City. Because this dataset includes many types of food-related stores, I filtered it to identify supermarkets by selecting rows where Establishment Type was “A” and Operation Type was “Store.” To identify full-service grocery stores, I filtered the Retail Food Stores dataset using keyword matching. I kept rows where the store’s combined name included supermarket indicators such as:
+For the full-service grocery store dataset, I again standardized ZIP codes and filtered for entries located in New York City. Because this dataset includes many types of food-related stores, I filtered it to identify supermarkets by selecting rows where Establishment Type was “A," Operation Type was “Store,” and kept rows where the store’s name included supermarket indicators such as:
 
 “whole foods,” “trader joe,” “aldi,” “costco,” “walmart,” “target,” “stop & shop,” “shoprite,” “kroger,” “bj’s,” “key food,” “food bazaar,” “ctown,” “c town,” “associated,” “food universe,” “pioneer,” “western beef,” “fine fare,” “met food,” “metfresh,” “food dynasty,” “sea town,” “supermarket,” “market,” “grocery,” or “foods.” 
 
